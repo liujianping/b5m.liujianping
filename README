@@ -1,0 +1,59 @@
+README;
+
+The whole Project includes Problem_A and Problem_B implementions.
+You can compile the project by cmake tool or makefile directly.
+
+cmake:
+
+	$:cd /project/rootdir
+	$:mkdir build
+	$:cmake ..
+	$:make
+	$:make install
+
+	the binary file will be installed in the /project/rootdir/bin directory.
+
+makefile:
+
+	$:cd /project/rootdir/Problem_A
+	$:make
+        
+        -------------------------------
+        sample test:
+        
+        $:./Problem_A_1 sample.config
+        $:./Problem_A_1 profile.config
+        $:./Problem_A_2 profile.config sample/sample_input.txt test.txt
+        $:diff test.txt sample/standard_sample_output.txt
+        
+        -------------------------------
+
+
+	$:cd /project/rootdir/Problem_B
+	$:make
+
+        -------------------------------
+        sample test:
+        
+        $:./Problem_NB sample/sample.train sample/sample_binary.test nb.txt
+        $:./Problem_DAGNB sample/sample.train sample/sample.test dag.txt
+        -------------------------------
+
+
+	use make directly, the binary file will be build directly in the same directoy, and 
+	u can test the program directly.
+
+where is the sample files:
+
+	/project/rootdir/Problem_A/
+	/project/rootdir/Problem_B/
+
+	/project/rootdir/b5m-programming-test/
+
+doxygen:
+
+	if u want to get the project document,
+	
+	$:cd /project/rootdir
+	$:doxygen doxygen.conf
+	
